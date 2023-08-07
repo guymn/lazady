@@ -11,7 +11,11 @@
     <!-- Categories -->
     <div class="col-3 p-2">
       <div class="d-grid gap-2">
-        <button class="btn btn-outline-primary" (click)="changeCategory()">
+        <button
+          [class.active]="undefined == selectedCategory"
+          class="btn btn-outline-primary"
+          (click)="changeCategory()"
+        >
           All
         </button>
         <button
@@ -36,7 +40,11 @@
         </h4>
         <div class="card-text bg-white p-1">
           {{ product.description }}
-          <button class="btn btn-success float-end btn-sm" style="float: right" (click)="addToCart(product)">
+          <button
+            class="btn btn-success float-end btn-sm"
+            style="float: right"
+            (click)="addToCart(product)"
+          >
             Add to cart
           </button>
         </div>
